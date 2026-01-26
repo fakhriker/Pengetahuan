@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKI - MiniWiki</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f6f6;
+      color: #202122;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #a2a9b1;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-btn {
+      font-size: 22px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .breadcrumb {
+      background: #ffffff;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid #a2a9b1;
+    }
+
+    .breadcrumb a {
+      color: #0645ad;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      min-height: 80vh;
+    }
+
+    /* SIDEBAR */
+    nav {
+      background: #ffffff;
+      border-right: 1px solid #a2a9b1;
+      width: 220px;
+      padding: 15px;
+      transition: width 0.3s ease, transform 0.3s ease;
+    }
+
+    nav.collapsed {
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0645ad;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    main h2 {
+      border-bottom: 1px solid #a2a9b1;
+      padding-bottom: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: #54595d;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1000;
+      }
+
+      nav.collapsed {
+        transform: translateX(-100%);
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+  <h1>MiniWiki</h1>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Beranda</a> &gt; <span>SKI</span>
+</div>
+
+<div class="container">
+  <nav id="sidebar" class="collapsed">
+    <h3>Daftar Topik</h3>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="sejarah.html">Sejarah</a></li>
+      <li><a href="sains.html">Sains</a></li>
+      <li><a href="teknologi.html">Teknologi</a></li>
+      <li><a href="agama.html">Agama</a></li>
+      <li><a href="budaya.html">Budaya</a></li>
+      <li><a href="ski.html">SKI</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>SKI</h2>
+    <h3>1. Masuknya Islam di Singapura</h3>
+    <p>
+      Islam masuk ke Singapura tidak lepas dari perannya sebagai wilayah strategis di jalur perdagangan Selat Malaka. Sejak abad ke-7 Masehi, para pedagang Muslim dari Arab, Persia, dan India sudah aktif berdagang di Asia Tenggara dan melewati Selat Malaka. Pada tahap ini, Islam sudah hadir dalam bentuk kontak awal, yakni melalui singgahnya pedagang Muslim di pelabuhan-pelabuhan, termasuk wilayah Singapura (Temasek).<strong>Temasek</strong> berasal dari kata Melayu “tasek/tasik” yang berarti laut atau danau, sehingga Temasek dapat diartikan sebagai “kota laut”. Dalam catatan sejarah, Temasek sudah dikenal sejak abad ke-13 Masehi sebagai pelabuhan dagang penting di jalur perdagangan Selat Malaka. Banyak kapal dari Cina, India, dan Arab singgah di Temasek untuk berdagang. Pada masa itu, Temasek berada di bawah pengaruh kerajaan besar di Nusantara, seperti Sriwijaya dan kemudian Majapahit. Temasek belum menjadi negara seperti sekarang, melainkan wilayah pelabuhan yang strategis. Setelah abad ke-14, Temasek mengalami kemunduran, lalu bangkit kembali ketika Parameswara datang dan kemudian mendirikan Kesultanan Melaka. Sejak saat itu, nama Temasek perlahan tergeser dan wilayah ini dikenal sebagai <strong>Singapura.</strong> Namun, pada masa ini Islam belum berkembang secara luas dan belum membentuk komunitas Muslim yang kuat.
+    </p>
+    <h3>2. Perkembangan Islam di Singapura</h3>
+    <p>
+      Munculnya pusat pendidikan Islam tradisional pada tahun 1800 M di Kampung Glam dan kawasan Rochor. Umat Islam mayoritas menganut mazhab Syafi’i dan teologi Asy’ariyah. Upaya serius umat Islam agar hukum Islam diakui negara, yang menghasilkan Undang-Undang Administrasi Hukum Islam (AMLA) tahun 1966 M. Berdirinya Majelis Ulama Islam Singapura (MUIS) yang berfungsi mengatur urusan Islam seperti halal, zakat, wakaf, masjid, madrasah, dan pernikahan Islam. 
+    </p>
+    <h3>3. Isu/Konflik Islam di Singapura</h3>
+    <p>
+      Umat Islam di Singapura merupakan minoritas, sehingga praktik keagamaannya diatur ketat oleh negara demi menjaga stabilitas sosial. Isu utama bukan konflik kekerasan, melainkan pembatasan ruang dakwah dan pengawasan kegiatan keagamaan melalui lembaga resmi (MUIS). Selain itu, ada stigma sosial terhadap Muslim Melayu serta kebijakan keamanan yang sensitif terhadap isu radikalisme. Tidak terdapat konflik fisik atau pelarangan Islam secara resmi.
+    </p>
+    <ul>Contoh Larangan
+      <li>1. Larangan memakai hijab saat bekerja sebagai Polisi, Angkatan bersenjata, Petugas Penjara, Petugas Imigrasi</li>
+      <li>2. Larangan menggunakan pengeras suara azan di luar Masjid</li>
+      <li>3. Larangan publikasi konten Agama</li>
+      <li>4. Larangan sunat bagi perempuan</li>
+      <li>5. Larangan adanya penceramah dari negara lain</li>
+    </ul>
+    <h3>4. Persentase Penduduk Muslim di Singapura</h3>
+    <p>15,6% dari total penduduk Singapura adalah Muslim menurut Census of Population 2020 (terbaru tersedia). Penduduk Singapura menganut beberapa agama lainnya, yaitu Buddha (±31,1%) sebagai ajaran pencerahan dari Siddhartha Gautama, Kristen (±18,9%) yang beriman kepada Yesus Kristus, Taoisme (±8,8%) yang menekankan keseimbangan hidup dengan alam (Tao), Hindu (±5%) yang bersumber dari tradisi Weda di India, Sikh (±0,3%) yang menekankan keesaan Tuhan dan keadilan sosial, serta tidak beragama (±20%) yaitu penduduk yang tidak menganut agama tertentu.
+</p>
+  </main>
+</div>
+
+<footer>
+  © 2026 MiniWiki
+</footer>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('collapsed');
+  }
+</script>
+
+</body>
+</html>
