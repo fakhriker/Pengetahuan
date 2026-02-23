@@ -6,6 +6,9 @@
   <title>SKI - MiniWiki</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0645ad">
 </head>
 <body>
 
@@ -188,6 +191,13 @@ Sebagian besar penduduk Mauritania beragama Islam dan menggunakan bahasa Arab da
 </footer>
 
   <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker Registered"));
+}
+  </script>
   
 <script src="script.js"></script>
 
