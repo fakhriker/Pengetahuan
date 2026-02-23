@@ -6,23 +6,25 @@
   <title>Informatika - MiniWiki</title>
 
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0645ad">
 </head>
 <body>
 
 <header>
   <div class="menu-btn" onclick="toggleSidebar()">☰</div>
-  <h1>MiniWiki</h1>
-
-  <div class="search-box">
-    <input type="text" placeholder="Cari materi informatika...">
-  </div>
+  <h1 onclick="location.reload()" style="cursor:pointer;">MiniWiki</h1>
 </header>
+
+<div class="breadcrumb">
+  <a href="index.html">Beranda</a> &gt; <span>Informatika</span>
+</div>
 
 <div class="container">
 
   <!-- SIDEBAR -->
   <nav id="sidebar" class="collapsed">
-    <h3>Daftar Mapel</h3>
+    <h3>Daftar Topik</h3>
     <ul>
       <li><a href="index.html">Beranda</a></li>
       <li><a href="ski.html">SKI</a></li>
@@ -30,16 +32,18 @@
     </ul>
   </nav>
 
+  <div id="overlay" onclick="closeSidebar()"></div>
+
   <!-- MAIN CONTENT -->
   <main>
 
     <h2>Informatika</h2>
     <p>
       Informatika adalah bidang ilmu yang mempelajari pengolahan data,
-      algoritma, pemrograman, dan sistem komputer.
+      algoritma, sistem komputer, dan pemrograman.
     </p>
 
-    <h3>Pilih Materi</h3>
+    <h3>Pilih Materi:</h3>
     <select id="kelompok">
       <option value="">-- Pilih Materi --</option>
       <option value="algoritma">Algoritma</option>
@@ -49,44 +53,45 @@
       <option value="ai">Kecerdasan Buatan</option>
     </select>
 
-    <!-- ===== SUB BAB ===== -->
+    <hr>
 
     <section id="algoritma">
-      <h2>Algoritma</h2>
+      <h2>1. Algoritma</h2>
       <p>
-        Algoritma adalah langkah-langkah sistematis untuk menyelesaikan suatu masalah.
+        Algoritma adalah langkah-langkah logis dan sistematis
+        untuk menyelesaikan suatu masalah.
       </p>
     </section>
 
     <section id="pemrograman">
-      <h2>Pemrograman</h2>
+      <h2>2. Pemrograman</h2>
       <p>
-        Pemrograman adalah proses menulis kode menggunakan bahasa tertentu
-        untuk membuat aplikasi atau sistem.
+        Pemrograman adalah proses menulis kode menggunakan bahasa
+        tertentu untuk membuat aplikasi atau sistem.
       </p>
     </section>
 
     <section id="jaringan">
-      <h2>Jaringan Komputer</h2>
+      <h2>3. Jaringan Komputer</h2>
       <p>
-        Jaringan komputer adalah sistem yang menghubungkan beberapa perangkat
+        Jaringan komputer menghubungkan beberapa perangkat
         untuk berbagi data dan sumber daya.
       </p>
     </section>
 
     <section id="basisdata">
-      <h2>Basis Data</h2>
+      <h2>4. Basis Data</h2>
       <p>
-        Basis data adalah kumpulan data yang disimpan secara terstruktur
-        sehingga mudah diakses dan dikelola.
+        Basis data adalah kumpulan data terstruktur yang
+        dapat diakses dan dikelola dengan mudah.
       </p>
     </section>
 
     <section id="ai">
-      <h2>Kecerdasan Buatan</h2>
+      <h2>5. Kecerdasan Buatan</h2>
       <p>
-        Kecerdasan Buatan (AI) adalah teknologi yang memungkinkan komputer
-        meniru kemampuan berpikir manusia.
+        AI adalah teknologi yang memungkinkan komputer
+        meniru kecerdasan manusia.
       </p>
     </section>
 
@@ -95,10 +100,10 @@
 </div>
 
 <footer>
-  © 2026 MiniWiki – Informatika by Fakhri 
+  © 2026 MiniWiki – Informatika
 </footer>
 
-<!-- Scroll To Top Button -->
+<!-- Scroll To Top -->
 <button id="scrollTopBtn">↑</button>
 
 <script src="script.js"></script>
