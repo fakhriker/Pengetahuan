@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informatika - MiniWiki</title>
 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+  <h1>MiniWiki</h1>
+
+  <div class="search-box">
+    <input type="text" placeholder="Cari materi informatika...">
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <nav id="sidebar" class="collapsed">
+    <h3>Daftar Mapel</h3>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="ski.html">SKI</a></li>
+      <li><a href="informatika.html">Informatika</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <h2>Informatika</h2>
+    <p>
+      Informatika adalah bidang ilmu yang mempelajari pengolahan data,
+      algoritma, pemrograman, dan sistem komputer.
+    </p>
+
+    <h3>Pilih Materi</h3>
+    <select id="kelompok">
+      <option value="">-- Pilih Materi --</option>
+      <option value="algoritma">Algoritma</option>
+      <option value="pemrograman">Pemrograman</option>
+      <option value="jaringan">Jaringan Komputer</option>
+      <option value="basisdata">Basis Data</option>
+      <option value="ai">Kecerdasan Buatan</option>
+    </select>
+
+    <!-- ===== SUB BAB ===== -->
+
+    <section id="algoritma">
+      <h2>Algoritma</h2>
+      <p>
+        Algoritma adalah langkah-langkah sistematis untuk menyelesaikan suatu masalah.
+      </p>
+    </section>
+
+    <section id="pemrograman">
+      <h2>Pemrograman</h2>
+      <p>
+        Pemrograman adalah proses menulis kode menggunakan bahasa tertentu
+        untuk membuat aplikasi atau sistem.
+      </p>
+    </section>
+
+    <section id="jaringan">
+      <h2>Jaringan Komputer</h2>
+      <p>
+        Jaringan komputer adalah sistem yang menghubungkan beberapa perangkat
+        untuk berbagi data dan sumber daya.
+      </p>
+    </section>
+
+    <section id="basisdata">
+      <h2>Basis Data</h2>
+      <p>
+        Basis data adalah kumpulan data yang disimpan secara terstruktur
+        sehingga mudah diakses dan dikelola.
+      </p>
+    </section>
+
+    <section id="ai">
+      <h2>Kecerdasan Buatan</h2>
+      <p>
+        Kecerdasan Buatan (AI) adalah teknologi yang memungkinkan komputer
+        meniru kemampuan berpikir manusia.
+      </p>
+    </section>
+
+  </main>
+
+</div>
+
+<footer>
+  © 2026 MiniWiki – Informatika by Fakhri 
+</footer>
+
+<!-- Scroll To Top Button -->
+<button id="scrollTopBtn">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
