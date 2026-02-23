@@ -4,6 +4,7 @@ const urlsToCache = [
   "/Pengetahuan/",
   "/Pengetahuan/index.html",
   "/Pengetahuan/ski.html",
+  "/Pengetahuan/informatika.html",
   "/Pengetahuan/style.css",
   "/Pengetahuan/script.js",
   "/Pengetahuan/manifest.json"
