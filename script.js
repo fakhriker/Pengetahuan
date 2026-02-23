@@ -44,3 +44,24 @@ function scrollToTop() {
     behavior: "smooth"
   });
 }
+
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  sidebar.classList.toggle("collapsed");
+
+  if (!sidebar.classList.contains("collapsed")) {
+    overlay.style.display = "block";
+  } else {
+    overlay.style.display = "none";
+  }
+}
+
+function closeSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  sidebar.classList.add("collapsed");
+  overlay.style.display = "none";
+}
