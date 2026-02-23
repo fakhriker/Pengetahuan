@@ -6,6 +6,10 @@
   <title>MiniWiki</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0645ad">
 </head>
 <body>
 
@@ -19,8 +23,6 @@
 </header>
 
 <div class="container">
-
-  <!-- SIDEBAR -->
   <nav id="sidebar" class="collapsed">
     <h3>Daftar Topik</h3>
     <ul>
@@ -28,26 +30,13 @@
     </ul>
   </nav>
 
-  <!-- MAIN -->
   <main>
     <h2>Selamat Datang di MiniWiki</h2>
     <p>
       MiniWiki adalah contoh website pengetahuan sederhana yang terinspirasi dari Wikipedia.
-      Website ini sudah <strong>responsif</strong>, sehingga tampilannya menyesuaikan dengan
-      perangkat pengguna, baik desktop maupun handphone.
-    </p>
-
-    <h3>Pemberitahuan</h3>
-    <p>
-      Ini adalah website <strong>coba-coba</strong>, jadi jangan mengharap lebih dan
-      <strong>mohon maaf</strong> jika terdapat error.
-    </p>
-
-    <p>
-      Untuk saat ini, MiniWiki hanya berisi materi <strong>SKI</strong>.
+      Website ini sudah <strong>responsif</strong>.
     </p>
   </main>
-
 </div>
 
 <footer>
@@ -55,5 +44,14 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- REGISTER SERVICE WORKER -->
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
+
 </body>
 </html>
