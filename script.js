@@ -56,3 +56,26 @@ function scrollToTop() {
     behavior: "smooth"
   });
 }
+
+function updateTime() {
+  const now = new Date();
+
+  const hari = now.toLocaleDateString('id-ID', { weekday: 'long' });
+
+  const tanggal = String(now.getDate()).padStart(2, '0');
+  const bulan = String(now.getMonth() + 1).padStart(2, '0');
+  const tahun = now.getFullYear();
+
+  const jam = now.toLocaleTimeString('id-ID');
+
+  const clock = document.getElementById("clock");
+  const date = document.getElementById("date");
+
+  if (clock && date) {
+    clock.textContent = jam;
+    date.textContent = `${hari}, ${tanggal}-${bulan}-${tahun}`;
+  }
+}
+
+setInterval(updateTime, 1000);
+updateTime();
