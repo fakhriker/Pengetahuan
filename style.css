@@ -236,3 +236,22 @@ footer {
     padding: 15px;
   }
 }
+
+.live-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#clock {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#date {
+  font-size: 14px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
