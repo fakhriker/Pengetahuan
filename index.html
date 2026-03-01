@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<div id="overlay" onclick="closeSidebar()"></div>
+
 <header>
   <div class="menu-btn" onclick="toggleSidebar()">☰</div>
   <h1 onclick="location.reload()" style="cursor:pointer;">MiniWiki</h1>
@@ -23,15 +25,15 @@
 </header>
 
 <div class="container">
-  <nav id="sidebar" class="collapsed">
+  <nav id="sidebar">
     <h3>Daftar Topik</h3>
     <ul>
       <li><a href="ski.html">SKI</a></li>
       <li><a href="informatika.html">Informatika</a></li>
     </ul>
   </nav>
-  
-  <div id="overlay" onclick="closeSidebar()"></div>
+
+  <main>
 
   <main>
     <h2>Selamat Datang di MiniWiki</h2>
