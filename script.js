@@ -44,11 +44,11 @@ if (kelompok) {
 // Scroll To Top Button
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", function () {
-  if (scrollBtn) {
+if (scrollBtn) {
+  window.addEventListener("scroll", function () {
     scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
-  }
-});
+  });
+}
 
 function scrollToTop() {
   window.scrollTo({
