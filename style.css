@@ -87,6 +87,7 @@ header h1 {
   max-width: 1200px;
   margin: auto;
   min-height: 80vh;
+  margin-top: 65px;
 }
 
 /* =================================
@@ -112,7 +113,12 @@ nav {
   border-right: 1px solid #a2a9b1;
   padding: 15px;
   transition: transform 0.3s ease;
-  z-index: 999;
+
+  position: fixed;
+  top: 65px;              /* turun di bawah header */
+  left: 0;
+  height: calc(100vh - 65px);
+  overflow-y: auto;       /* bisa scroll kalau menu panjang */
 }
 
 nav h3 {
