@@ -79,3 +79,13 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 updateTime();
+
+window.addEventListener("resize", function () {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  if (window.innerWidth > 768) {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+});
